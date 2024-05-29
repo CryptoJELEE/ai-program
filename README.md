@@ -54,6 +54,107 @@ FN 507  / TP 616
 정확도: 0.8048, 정밀도: 0.8137, 재현율: 0.5485, F1: 0.6553, AUC:0.8761
 ======================================================================
 ```
+
+## Compare Model Result
+
+```result
+Mode Logistic Regression : 정확도 = 0.8067617866004962,정밀도 = 0.7243035542747358,재현율 = 0.691743119266055,F1 스코어 = 0.7076489910839981,  
+Mode Decision Tree : 정확도 = 0.7921836228287841,정밀도 = 0.6548672566371682,재현율 = 0.8146788990825689,F1 스코어 = 0.7260834014717906,  
+Mode Random Forest : 정확도 = 0.8052109181141439,정밀도 = 0.6824644549763034,재현율 = 0.7926605504587156,F1 스코어 = 0.733446519524618,  
+Mode k-NN : 정확도 = 0.7636476426799007,정밀도 = 0.6277258566978193,재현율 = 0.7394495412844037,F1 스코어 = 0.6790227464195451,  
+Mode Naive Bayes : 정확도 = 0.7872208436724566,정밀도 = 0.7556962025316456,재현율 = 0.5477064220183486,F1 스코어 = 0.6351063829787233,  
+Mode Neural Network : 정확도 = 0.8061414392059554,정밀도 = 0.6744186046511628,재현율 = 0.8247706422018348,F1 스코어 = 0.7420553033429633,  
+Model: Logistic Regression
+Accuracy: 0.8067617866004962
+Confusion Matrix:
+[[1847  287]
+ [ 336  754]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.846083  0.865511  0.855687  2134.000000
+1              0.724304  0.691743  0.707649  1090.000000
+accuracy       0.806762  0.806762  0.806762     0.806762
+macro avg      0.785193  0.778627  0.781668  3224.000000
+weighted avg   0.804911  0.806762  0.805637  3224.000000
+ROC-AUC: 0.8777069379121778
+
+
+Model: Decision Tree
+Accuracy: 0.7921836228287841
+Confusion Matrix:
+[[1666  468]
+ [ 202  888]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.891863  0.780694  0.832584  2134.000000
+1              0.654867  0.814679  0.726083  1090.000000
+accuracy       0.792184  0.792184  0.792184     0.792184
+macro avg      0.773365  0.797686  0.779334  3224.000000
+weighted avg   0.811737  0.792184  0.796577  3224.000000
+ROC-AUC: 0.853914989295203
+
+
+Model: Random Forest
+Accuracy: 0.8052109181141439
+Confusion Matrix:
+[[1732  402]
+ [ 226  864]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.884576  0.811621  0.846530  2134.000000
+1              0.682464  0.792661  0.733447  1090.000000
+accuracy       0.805211  0.805211  0.805211     0.805211
+macro avg      0.783520  0.802141  0.789988  3224.000000
+weighted avg   0.816244  0.805211  0.808298  3224.000000
+ROC-AUC: 0.8833205076395279
+
+
+Model: k-NN
+Accuracy: 0.7636476426799007
+Confusion Matrix:
+[[1656  478]
+ [ 284  806]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.853608  0.776007  0.812960  2134.000000
+1              0.627726  0.739450  0.679023  1090.000000
+accuracy       0.763648  0.763648  0.763648     0.763648
+macro avg      0.740667  0.757729  0.745991  3224.000000
+weighted avg   0.777240  0.763648  0.767677  3224.000000
+ROC-AUC: 0.8310239202772071
+
+
+Model: Naive Bayes
+Accuracy: 0.7872208436724566
+Confusion Matrix:
+[[1941  193]
+ [ 493  597]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.797453  0.909560  0.849825  2134.000000
+1              0.755696  0.547706  0.635106  1090.000000
+accuracy       0.787221  0.787221  0.787221     0.787221
+macro avg      0.776574  0.728633  0.742466  3224.000000
+weighted avg   0.783335  0.787221  0.777231  3224.000000
+ROC-AUC: 0.8033550295349217
+
+
+Model: Neural Network
+Accuracy: 0.8061414392059554
+Confusion Matrix:
+[[1700  434]
+ [ 191  899]]
+Classification Report:
+              precision    recall  f1-score      support
+0              0.898995  0.796626  0.844720  2134.000000
+1              0.674419  0.824771  0.742055  1090.000000
+accuracy       0.806141  0.806141  0.806141     0.806141
+macro avg      0.786707  0.810698  0.793388  3224.000000
+weighted avg   0.823068  0.806141  0.810010  3224.000000
+ROC-AUC: 0.8915745939485654
+
+```
+
 ## Model Choice
 The optimal prediction model was found to be the random forest.:
 1. **Accuracy**: Calculate the accuracy of the logistic regression model.
