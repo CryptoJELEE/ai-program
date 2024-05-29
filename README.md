@@ -66,4 +66,5 @@ The optimal prediction model was found to be the random forest.:
 - **Test Data**: Remaining 20% of the total data
 - **Other Test Data**: 5,886 samples
 
-
+## NOTE
+- **We used the SMOTE method to balance the data.
