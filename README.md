@@ -223,3 +223,26 @@ ROC-AUC: 88.9%
 ## 종합 제안
 본 연구에서는 다양한 모델의 성능을 비교 분석한 결과, 랜덤 포레스트와 신경망 모델이 가장 높은 성능을 보였다. 따라서 이 두 모델을 주요 모델로 선택하여 활용하는 것이 바람직하다. 또한, 해석 가능성과 성능의 균형이 중요할 경우 로지스틱 회귀나 랜덤 포레스트를, 단순한 구현과 빠른 예측이 필요할 경우 나이브 베이즈를 고려할 수 있다.랜덤포레스트, 신경망 예측모델 기반 앙상블 결과 유의미한 차이 없음.
 
+
+## Future Direction Using Model
+
+We plan to handle modules for each model as classes and run them as daemons to continuously train. 
+Through a separate web service interface, visitor data will be transmitted to extract purchase predictions and probabilities. 
+This information will be used to select targets for post-event analysis and for separate marketing initiatives.
+- Class Modeling and Deamon Program
+- Interface Design
+- Integration With WebService 
+
+## MLP E-Commerce User Purchase Prediction Diagram
+
+```mermaid
+sequenceDiagram
+    participant ModelDeamon
+    participant JsonInterface
+    participant WebService
+    WebService->>JsonInterface: Request Predict
+    JsonInterface->>ModelDeamon: Request Predict
+    ModelDeamon->>JsonInterface: Response Predict Result
+    JsonInterface->>WebService: Response Predict Result    
+```
+
