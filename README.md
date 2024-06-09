@@ -97,25 +97,19 @@ ROC-AUC: 88.9%
 본 연구에서는 다양한 모델의 성능을 비교 분석한 결과, 랜덤 포레스트와 신경망 모델이 가장 높은 성능을 보였다. 따라서 이 두 모델을 주요 모델로 선택하여 활용하는 것이 바람직하다. 또한, 해석 가능성과 성능의 균형이 중요할 경우 로지스틱 회귀나 랜덤 포레스트를, 단순한 구현과 빠른 예측이 필요할 경우 나이브 베이즈를 고려할 수 있다.랜덤포레스트, 신경망 예측모델 기반 앙상블 결과 유의미한 차이 없음.
 
 
-## Future Direction Using Model
+## 프로젝트 기대효과
+### 1. 정확한 구매예측
+   - AI 분석으로 고객 구매 여부를 예측
+### 2. 타겟 마케팅 강화
+   - 고객 특성과 구매 단계 분석으로 효과적인 타겟팅
+### 3. 운영 효율화
+   - 실시간 예측과 지속적 개선으로 운영 효율개선
 
-We plan to handle modules for each model as classes and run them as daemons to continuously train. 
-Through a separate web service interface, visitor data will be transmitted to extract purchase predictions and probabilities. 
-This information will be used to select targets for post-event analysis and for separate marketing initiatives.
-- Class Modeling and Deamon Program
-- Interface Design
-- Integration With WebService 
-
-## MLP E-Commerce User Purchase Prediction Diagram
-
-```mermaid
-sequenceDiagram
-    participant ModelDeamon
-    participant JsonInterface
-    participant WebService
-    WebService->>JsonInterface: Request Predict
-    JsonInterface->>ModelDeamon: Request Predict
-    ModelDeamon->>JsonInterface: Response Predict Result
-    JsonInterface->>WebService: Response Predict Result    
-```
+## 향후 발전 방향
+### 1. 멀티 태그킹 모델
+   - 구매 예측 외에도 이탈 예측, 교차 판매 등 다양한 태스크를 학습할 수 있음
+### 2. 강화 학습 도입
+   - 고객 상호작용 데이터를 활용하여 실시간 최적화가 가능한 모델을 개발할 수 있음.
+### 3. 설명 가능한 AI
+   - 모델의 예측 과정을 이해할 수 있도록 설명 가능한 AI 기술을 도입할 수 있음
 
